@@ -1,0 +1,18 @@
+"two way data binding with MVC in AngularJS"
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Two Way Data Binding with MVC in AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+    <h1>Two Way Data Binding with MVC in AngularJS</h1>
+    <input type="text" ng-model="name" placeholder="Enter your name">
+    <p>Hello, {{name}}!</p> 
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+            $scope.name = '';
+        });
+    </script>
+</body></html>  

@@ -1,0 +1,21 @@
+"in angularjs , i will enter a name in input field and it will display the name and currency . apply uppercase filter and lowercase filter to the name and currency respectively ,there will be two input fildes for name and currency
+ show curency sighn at the end of the currency input field"
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Two Way Data Binding with Filters in AngularJS</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+    <h1>Two Way Data Binding with Filters in AngularJS</h1>
+    <input type="text" ng-model="name" placeholder="Enter your name">
+    <input type="text" ng-model="currency" placeholder="Enter currency">
+    <p>Hello, {{name | uppercase}}!</p>
+    <p>Your currency is: {{currency | lowercase}} $</p>
+    <script>        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+            $scope.name = '';
+            $scope.currency = '';
+        });
+    </script>
+</body></html>

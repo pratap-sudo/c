@@ -1,0 +1,21 @@
+"Program to Display Data using Model, View, Controller (MVC) Architecture in angularjs"
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>MVC Architecture in AngularJS</title>    
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+</head>
+<body ng-controller="myController">
+    <h1>Data Display using MVC Architecture in AngularJS</h1>
+    <ul>
+        <li ng-repeat="item in data">{{ item }}</li>
+    </ul>   
+    <script>
+        var app = angular.module('myApp', []);
+        app.controller('myController', function($scope) {
+            $scope.data = ['Item 1', 'Item 2', 'Item 3', 'Item 4'];
+        });
+    </script>
+</body>
+</html> 
+

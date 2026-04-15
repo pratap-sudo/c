@@ -1,0 +1,50 @@
+"Create objects for the given problem with
+JSON data. The problem is: A library has a collection of books. Each book has a title, author, and publication year. The library also has members who can borrow books. Each member has a name and a list of borrowed books.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library JSON Data</title>
+</head>
+<body>
+    <h1>Library JSON Data Example</h1>
+    <p>Check the browser console (F12) to see the JSON data.</p>
+
+    <script>
+        // Define the library data using JSON
+        const library = {
+            "books": [
+                {
+                    "title": "To Kill a Mockingbird",
+                    "author": "Harper Lee",
+                    "publicationYear": 1960
+                },
+                {
+                    "title": "1984",
+                    "author": "George Orwell",
+                    "publicationYear": 1949
+                },
+                {
+                    "title": "The Great Gatsby",
+                    "author": "F. Scott Fitzgerald",
+                    "publicationYear": 1925
+                }
+            ],
+            "members": [
+                {
+                    "name": "Alice",
+                    "borrowedBooks": ["To Kill a Mockingbird", "1984"]
+                },
+                {
+                    "name": "Bob",
+                    "borrowedBooks": ["The Great Gatsby"]
+                }
+            ]
+        };
+
+        // Log the library data to the console
+        console.log(JSON.stringify(library, null, 2));
+    </script>
+</body>
+</html>
